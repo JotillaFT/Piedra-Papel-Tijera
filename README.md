@@ -1,5 +1,5 @@
 # Piedra-Papel-Tijera
-## Tabla de propiedades del entorno
+## 1.Especificación do contorna de tarefas
 Contorno de tarefas | Observable| Axentes | Determinista | Episódico | Estático | Discreto | Coñecido
 :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
  RPS | Parcialmente | MultiAgente | No Determinista | Secuencial | Estático |  Discreto |  Coñecido |
@@ -18,3 +18,6 @@ Contorno de tarefas | Observable| Axentes | Determinista | Episódico | Estátic
  Decimos que es Discreto, por que las posibles opciones son limitadas, al igual que las combinaciones de estados.
  #### **Conocido** 
  El juego de RPS todos los agentes conocen sus reglas para poder jugarlo, se trata de un mundo pequeño sin posibilidad de descubrir nuevas reglas a medida que juegas.
+
+ ## 2.Identificación del tipo de agente y estructura
+ El tipo de agente utilizado para este proyecto será un **agente reactivo basado en un modelo** (Indicado en el punto 2.4.3 del libro "Artificial Intelligence a Modern Approach). Esto se debe a que en la implementación del código guardaremos dos variables goblales para que el agente tome decisiones, se tratan de la variable **result** y **last_user_action**. Además crearemos una clase *GameComputerResult* de tipo enumerado que guardará el estado de la ultima partida y que resultado obtuvo nuestro agente.
