@@ -91,7 +91,7 @@ def play_another_round():
 
 
 def main():
-
+    global last_user_action
     while True:
         try:
             user_action = get_user_action()
@@ -101,6 +101,7 @@ def main():
             continue
 
         computer_action = get_computer_action()
+        last_user_action = user_action
         assess_game(user_action, computer_action)
 
         if not play_another_round():
