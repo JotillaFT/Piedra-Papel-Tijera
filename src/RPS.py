@@ -2,6 +2,7 @@ import random
 from enum import IntEnum
 
 result = 0
+last_user_action = 0
 
 class GameAction(IntEnum):
 
@@ -50,7 +51,24 @@ def assess_game(user_action, computer_action):
 
 
 def get_computer_action():
-    computer_selection = random.randint(0, len(GameAction) - 1)
+    global result
+    global last_user_action
+    if result == GameComputerResult.Win:
+        computer_selection = last_user_action
+    elif result == GameComputerResult.Lose:
+        #User pick Rock last round
+        if last_user_action == GameAction.Rock:
+            computer_selection = GameAction.Paper
+            
+        # User pick Paper last round
+        elif last_user_action == GameAction.Paper:
+           computer_selection =  GameAction.Scissors
+
+        # User pick Scissor last round
+        elif last_user_action == GameAction.Scissors:
+           computer_selection =  GameAction.Rock  
+    else:
+        computer_selection =  random.randint(0, len(GameAction) - 1)
     computer_action = GameAction(computer_selection)
     print(f"Computer picked {computer_action.name}.")
 
