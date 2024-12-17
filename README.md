@@ -29,5 +29,23 @@ Contorno de tarefas | Observable| Axentes | Determinista | Episódico | Estátic
  * Estado Victoria o Derrota: Según el modelo del agente, es necesario comprobar cúal fue el desenlace de la partida, ya que ello determinará cual será su via de decisión para escoger su próximo movimiento.
  * Ultima jugada del oponente: Es importante poder almacenar esta información ya que la lógica seguida recae de forma muy importante en que jugó el adversario el turno anterior para así poder adelantarse .
  * Lógica de decisión: Esta será la parte donde todos los elementos anteriores se tienen en cuenta y el agente decide que movimiento realizará en la ronda siguiente.
+
+## 3.Proceso de instalación
+ * Crear una carpeta donde almacenar el repositorio y colocarnos en él.
+   ```
+   mkdir <nombre de la carpeta>
+   cd <nombre de la caperta
+   ```
+ * Clonar el repositorio mediante el enlace de github que se encuentra en `code` en el apartado `https`.
+   ```
+   git clone <url del repositorio>
+   ```
+ * Colocarse en la carpeta `Piedra-Papel-Tijera/src/main`y iniciar el programa.
+   ```
+   cd Piedra-Papel-Tijera/src/main/
+   python3 RPS.py
+   ```
+   
+    
  
 
