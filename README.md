@@ -36,10 +36,10 @@ La aplicación de este estudio sería la siguiente:
 **Diagrama del agente**<img src="./img/modelo_agente.png" width="900" height="450"/>
 
 ### [Explicación del diagrama del agente:](#diagrama)
- * Estado Victoria o Derrota: Según el modelo del agente, es necesario comprobar cúal fue el desenlace de la partida, ya que ello determinará cual será su via de decisión para escoger su próximo movimiento.
- * Ultima jugada del oponente: Es importante poder almacenar esta información ya que la lógica seguida recae de forma muy importante en que jugó el adversario el turno anterior para así poder adelantarse .
- * Lógica de decisión: Esta será la parte donde todos los elementos anteriores se tienen en cuenta y el agente decide que movimiento realizará en la ronda siguiente.
-
+ * **asses_game()**: Mediante esta función se indica cuál fue el resultado de la partida y devuelve uno de los tres posibles valores: `Lose`, `Win` o `Draw`.
+  * **get_computer_action()**: Función por la cual el agente decidirá cuál será su siguiente movimiento, para ello utilizará tanto `result` como `last_user_action`
+ * **last_user_action**: Variable global, la cual almacena el último movimiento realizado por el usuario.
+ * **result**: Variable global, que almacena cuál fue el resultado de la partida anterior
 ## 3.Proceso de instalación
  * Crear una carpeta donde almacenar el repositorio y colocarnos en él.
    ```
